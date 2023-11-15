@@ -1,0 +1,7 @@
+<!-- src/app/lista-libros/lista-libros.component.html -->
+<div *ngFor="let libro of libros">
+    {{ libro.nombre }} - {{ libro.autor }} - {{ libro.biblioteca }}
+  </div>
+  <div *ngFor="let biblioteca of bibliotecas">
+    {{ biblioteca.nombre }} - {{ biblioteca.direccion }} - {{ biblioteca.ciudad }}
+  </div>  

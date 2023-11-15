@@ -1,0 +1,13 @@
+<p>insertar works!</p><!-- src/app/formulario-libro/formulario-libro.component.html -->
+<form>
+  <label for="nombre">Nombre:</label>
+  <input id="nombre" [(ngModel)]="nuevoLibro.nombre" />
+
+  <label for="autor">Autor:</label>
+  <input id="autor" [(ngModel)]="nuevoLibro.autor" />
+
+  <label for="biblioteca">Biblioteca:</label>
+  <input id="biblioteca" [(ngModel)]="nuevoLibro.biblioteca" />
+
+  <button type="button" (click)="agregarLibro()">Agregar Libro</button>
+</form>
