@@ -1,7 +1,9 @@
 <!-- src/app/lista-libros/lista-libros.component.html -->
-<div *ngFor="let libro of libros">
-    {{ libro.nombre }} - {{ libro.autor }} - {{ libro.biblioteca }}
-  </div>
-  <div *ngFor="let biblioteca of bibliotecas">
-    {{ biblioteca.nombre }} - {{ biblioteca.direccion }} - {{ biblioteca.ciudad }}
-  </div>  
+<div *ngFor="let libro of libros" class="libro-container">
+  {{ libro.nombre }} - {{ libro.autor }} - {{ libro.biblioteca }}
+</div>
+<!-- src/app/lista-bibliotecas/lista-bibliotecas.component.html -->
+<div *ngFor="let biblioteca of bibliotecas" class="biblioteca-container">
+  {{ biblioteca.nombre }} - {{ biblioteca.direccion }} - {{ biblioteca.ciudad }}
+</div>
+

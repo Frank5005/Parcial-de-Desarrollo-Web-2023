@@ -7,7 +7,7 @@ import { Libro } from '../models/libro.model';
   providedIn: 'root'
 })
 export class LibrosService {
-  private apiUrl = 'http://localhost:puerto/api/libros';
+  private apiUrl = 'http://localhost:3306/api/libros';
 
   constructor(private http: HttpClient) {}
 
