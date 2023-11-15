@@ -7,7 +7,7 @@ import { Libro } from '../models/libro.model';
   providedIn: 'root'
 })
 export class LibrosService {
-  private apiUrl = 'http://localhost:3306/api/libros';
+  private apiUrl = 'jdbc:mysql://localhost:3306/final__javeriana';
 
   constructor(private http: HttpClient) {}
 

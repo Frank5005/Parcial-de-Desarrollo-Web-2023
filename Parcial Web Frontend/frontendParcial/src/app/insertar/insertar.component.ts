@@ -17,7 +17,7 @@ export class InsertarComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  agregarLibro(): void {
+  insertarLibro(): void {
     this.libroCreado.emit(this.nuevoLibro);
     this.nuevoLibro = { nombre: '', autor: '', biblioteca: '' };
   }

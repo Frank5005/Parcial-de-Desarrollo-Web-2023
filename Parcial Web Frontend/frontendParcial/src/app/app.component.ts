@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Libro } from './models/libro.model';
 import { Biblioteca } from './models/biblioteca.model';
+import { LibrosService } from './services/libros.service';
 
 
 @Component({
@@ -17,12 +18,19 @@ export class AppComponent {
   libros: Libro[] = [];
   bibliotecas: Biblioteca[] = [];
 
-  agregarLibro(libro: Libro): void {
-    // Lógica para agregar el libro a través del servicio
-  }
+    constructor(private libroService: LibrosService) {}
 
-  agregarBiblioteca(biblioteca: Biblioteca): void {
-    // Lógica para agregar la biblioteca a través del servicio
+  insertarLibro(libro: Libro): void {
+    // Lógica para agregar el libro a través del servicio
+    this.libroService.insertarLibro(libro).subscribe(
+      nuevoLibro => {
+        this.libros.push(nuevoLibro);
+        console.log('Libro agregado:', nuevoLibro);
+      },
+      error => {
+        console.error('Error al agregar el libro:', error);
+      }
+    );
   }
 }
 

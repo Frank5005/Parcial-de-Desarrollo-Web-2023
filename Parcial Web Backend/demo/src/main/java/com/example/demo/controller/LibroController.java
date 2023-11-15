@@ -1,10 +1,10 @@
 package com.example.demo.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.ui.Model;
+//import org.springframework.ui.Model;
 
 import com.example.demo.model.Libro;
 import com.example.demo.model.LibroRepository;
@@ -17,7 +17,6 @@ public class LibroController {
 
     private final LibroRepository bookRepository;
 
-    @Autowired
     public LibroController(LibroRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
@@ -36,7 +35,7 @@ public class LibroController {
 
     // Endpoint para insertar un nuevo libro
     @PostMapping
-    public ResponseEntity<Libro> insertBook(@RequestBody Libro libro) {
+    public ResponseEntity<Libro> insertarLibro(@RequestBody Libro libro) {
         Libro nuevoLibro = bookRepository.save(libro);
         return ResponseEntity.status(HttpStatus.CREATED).body(nuevoLibro);
     }
