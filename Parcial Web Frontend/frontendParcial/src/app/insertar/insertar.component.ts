@@ -6,7 +6,7 @@ import { Libro } from '../models/libro.model';
   //standalone: true,
   //imports: [CommonModule],
   templateUrl: './insertar.component.html',
-  styleUrl: './insertar.component.css'
+  styleUrls: ['./insertar.component.css']
 })
 export class InsertarComponent implements OnInit {
   @Output() libroCreado = new EventEmitter<Libro>();

@@ -12,7 +12,7 @@ import com.example.demo.model.LibroRepository;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/books")
+@RequestMapping("jdbc:mysql://localhost:3306/final__javeriana")
 public class LibroController {
 
     private final LibroRepository bookRepository;
